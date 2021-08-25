@@ -1,0 +1,29 @@
+MATCH: GreedyPlayer vs rfondato 
+
+WINNER: rfondato
+
+
+####### STATS FOR PLAYER: 1 - GreedyPlayer #######
+
+Wins as first: 0.06818181818181818
+Wins as second: 0.017857142857142856
+Ties: 0.02
+Plays as first: 44
+Plays as second: 56
+Avg game duration: 59.44
+
+##################################################
+            
+        
+####### STATS FOR PLAYER: 2 - rfondato #######
+
+Wins as first: 0.9642857142857143
+Wins as second: 0.9090909090909091
+Ties: 0.02
+Plays as first: 56
+Plays as second: 44
+Avg game duration: 59.44
+
+##############################################
+            
+        
