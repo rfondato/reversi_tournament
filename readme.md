@@ -19,6 +19,7 @@ Instalar las siguientes dependencias:
 * torch
 * dill
 * boardgame2
+* stable-baselines3
 
 <h3> Instrucciones para agregar un jugador propio: </h3>
 
