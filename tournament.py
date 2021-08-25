@@ -95,17 +95,17 @@ class Tournament:
         self.games = games_per_match
         self.board_shape = board_shape
         self.deterministic = deterministic
-        self.players = []
-        self.positions_table = dict()
         self.n_processes = n_processes if (n_processes is not None) else cpu_count()
         self.verbose = verbose
         self.log_folder = log_folder
-        self.finished_matches = 0
+        self.players = []
 
     def add_player(self, player: BasePlayer):
         self.players.append(player)
 
     def play(self):
+        self._reset()
+
         if self.log_folder is not None:
             self._create_log_folder()
 
@@ -154,6 +154,10 @@ class Tournament:
         print()
         print(print_bold(print_cyan(self.get_results())))
 
+    def _reset(self):
+        self.positions_table = dict()
+        self.finished_matches = 0
+
     def _play_async(self, matches):
         with Pool(self.n_processes) as p:
             jobs = []
@@ -192,7 +196,6 @@ class Tournament:
         print()
 
     def _create_positions_table(self):
-        self.positions_table = dict()
         for p in self.players:
             self.positions_table[p.name] = 0
 
